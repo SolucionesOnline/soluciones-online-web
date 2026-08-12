@@ -24,7 +24,7 @@ export default function Home() {
               +{products.length} equipos en stock
             </span>
             <h1 className="mt-4 text-4xl font-bold leading-tight text-brand-dark sm:text-5xl">
-              Celulares al mejor precio, con entrega inmediata.
+              Celulares al mejor precio, con ofertas 🔥 todas las semanas.
             </h1>
             <p className="mt-4 text-lg text-neutral-600">
               Xiaomi, Motorola, iPhone y Samsung. Venta minorista y mayorista,
@@ -103,7 +103,7 @@ export default function Home() {
       {/* Ofertas / entrega inmediata */}
       <section className="mx-auto max-w-6xl px-4 py-8">
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-brand-dark">Entrega inmediata</h2>
+          <h2 className="text-2xl font-bold text-brand-dark">🔥 Ofertas destacadas</h2>
           <Link href="/catalogo" className="text-sm font-semibold text-brand hover:text-accent">
             Ver todo →
           </Link>

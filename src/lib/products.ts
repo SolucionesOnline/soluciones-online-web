@@ -9,7 +9,8 @@ export type Product = {
   priceX1: number;
   priceX5: number;
   color: string | null;
-  entregaInmediata: boolean;
+  isPromo: boolean;
+  promoLabel: string | null;
   stock: boolean;
 };
 
@@ -33,8 +34,5 @@ export function relatedProducts(product: Product, limit = 4) {
 }
 
 export function featuredProducts(limit = 8) {
-  return [...products]
-    .filter((p) => p.entregaInmediata)
-    .sort((a, b) => a.priceX1 - b.priceX1)
-    .slice(0, limit);
+  return [...products].filter((p) => p.isPromo).slice(0, limit);
 }

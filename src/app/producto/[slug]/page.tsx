@@ -48,13 +48,18 @@ export default async function ProductPage({
           <span className="text-xs font-semibold uppercase tracking-wide text-brand-light">
             {product.brand} · {product.category}
           </span>
-          <h1 className="mt-2 text-2xl font-bold text-brand-dark sm:text-3xl">
+          <h1
+            className={`mt-2 text-2xl text-brand-dark sm:text-3xl ${
+              product.isPromo ? "font-extrabold" : "font-bold"
+            }`}
+          >
+            {product.isPromo && "🔥 "}
             {product.name}
           </h1>
 
-          {product.entregaInmediata && (
-            <span className="mt-3 inline-block rounded-full bg-deal/10 px-3 py-1 text-xs font-semibold text-deal">
-              Entrega inmediata
+          {product.isPromo && (
+            <span className="mt-3 inline-block rounded-full bg-deal px-3 py-1 text-xs font-bold text-white">
+              🔥 {product.promoLabel ?? "OFERTA"}
             </span>
           )}
 

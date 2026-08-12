@@ -1,10 +1,10 @@
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
-import { brands, categories, products } from "@/lib/products";
+import { brands, products } from "@/lib/products";
 
 type SearchParams = {
   brand?: string;
-  category?: string;
+  promo?: string;
   q?: string;
 };
 
@@ -17,11 +17,11 @@ export default async function Catalogo({
 }: {
   searchParams: Promise<SearchParams>;
 }) {
-  const { brand, category, q } = await searchParams;
+  const { brand, promo, q } = await searchParams;
 
   const filtered = products.filter((p) => {
     if (brand && p.brand !== brand) return false;
-    if (category && p.category !== category) return false;
+    if (promo && !p.isPromo) return false;
     if (q && !p.name.toLowerCase().includes(q.toLowerCase())) return false;
     return true;
   });
@@ -29,7 +29,7 @@ export default async function Catalogo({
   function chipHref(params: SearchParams) {
     const sp = new URLSearchParams();
     if (params.brand) sp.set("brand", params.brand);
-    if (params.category) sp.set("category", params.category);
+    if (params.promo) sp.set("promo", params.promo);
     const s = sp.toString();
     return s ? `/catalogo?${s}` : "/catalogo";
   }
@@ -43,7 +43,7 @@ export default async function Catalogo({
 
       <form className="mt-6 max-w-sm" action="/catalogo" method="get">
         {brand && <input type="hidden" name="brand" value={brand} />}
-        {category && <input type="hidden" name="category" value={category} />}
+        {promo && <input type="hidden" name="promo" value={promo} />}
         <input
           type="text"
           name="q"
@@ -57,10 +57,18 @@ export default async function Catalogo({
         <Link
           href="/catalogo"
           className={`rounded-full px-3 py-1 text-xs font-medium ${
-            !brand && !category ? "bg-brand text-white" : "bg-surface text-brand-dark"
+            !brand && !promo ? "bg-brand text-white" : "bg-surface text-brand-dark"
           }`}
         >
           Todos
+        </Link>
+        <Link
+          href={chipHref({ promo: "1" })}
+          className={`rounded-full px-3 py-1 text-xs font-bold ${
+            promo ? "bg-deal text-white" : "bg-deal/10 text-deal"
+          }`}
+        >
+          🔥 Ofertas
         </Link>
         {brands.map((b) => (
           <Link
@@ -71,17 +79,6 @@ export default async function Catalogo({
             }`}
           >
             {b}
-          </Link>
-        ))}
-        {categories.map((c) => (
-          <Link
-            key={c}
-            href={chipHref({ category: c })}
-            className={`rounded-full px-3 py-1 text-xs font-medium ${
-              category === c ? "bg-accent text-white" : "bg-surface text-brand-dark"
-            }`}
-          >
-            {c}
           </Link>
         ))}
       </div>
