@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import { brands, featuredProducts, products } from "@/lib/products";
@@ -46,25 +47,39 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="rounded-2xl border-2 border-accent bg-white p-8 shadow-xl shadow-accent/10">
-            <p className="text-xl font-bold text-brand-dark sm:text-2xl">
-              ¿Por qué comprar en Soluciones Online?
-            </p>
-            <ul className="mt-6 space-y-4 text-base font-semibold text-brand-dark sm:text-lg">
-              <li className="flex items-center gap-3">
-                <span className="text-2xl">💵</span> Precios en dólares, sin sorpresas
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-2xl">📦</span> Envío gratis a partir de 2 unidades
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-2xl">🛡</span> Garantía de 3 meses por fallas de fábrica
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-2xl">🤖</span> Atención inmediata por WhatsApp e IA
-              </li>
-            </ul>
+          <div className="mx-auto w-full max-w-xs overflow-hidden rounded-3xl shadow-xl sm:max-w-sm">
+            <Image
+              src="/promo/whatsapp-promo.jpeg"
+              alt="Atención personalizada por WhatsApp — cotizamos tu celular al mejor precio"
+              width={816}
+              height={1296}
+              className="h-auto w-full"
+              priority
+            />
           </div>
+        </div>
+      </section>
+
+      {/* ¿Por qué comprar acá? */}
+      <section className="mx-auto max-w-6xl px-4 pt-14">
+        <div className="rounded-2xl border-2 border-accent bg-white p-8 shadow-xl shadow-accent/10">
+          <p className="text-center text-xl font-bold text-brand-dark sm:text-2xl">
+            ¿Por qué comprar en Soluciones Online?
+          </p>
+          <ul className="mt-6 grid gap-4 text-base font-semibold text-brand-dark sm:grid-cols-2 sm:text-lg lg:grid-cols-4">
+            <li className="flex items-center gap-3">
+              <span className="text-2xl">💵</span> Precios en dólares, sin sorpresas
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="text-2xl">📦</span> Envío gratis a partir de 2 unidades
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="text-2xl">🛡</span> Garantía de 3 meses por fallas de fábrica
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="text-2xl">🤖</span> Atención inmediata por WhatsApp e IA
+            </li>
+          </ul>
         </div>
       </section>
 
