@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "¿Qué significa \"Entrega inmediata\"?",
-    a: "Si el producto tiene esa etiqueta, podés retirarlo en 30 minutos desde que confirmás la reserva.",
+    a: "Si el producto tiene esa etiqueta, podés retirarlo o te lo enviamos en el día, desde que confirmás la reserva.",
   },
   {
     q: "¿Cuándo puedo retirar mi pedido?",

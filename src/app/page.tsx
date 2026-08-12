@@ -6,7 +6,7 @@ import { waLink } from "@/lib/site";
 const brandBlurb: Record<string, string> = {
   Xiaomi: "Redmi, Poco y Note",
   Motorola: "Moto G y Edge",
-  Apple: "iPhone y accesorios",
+  iPhone: "Todos los modelos",
   Samsung: "Galaxy A, S y tablets",
 };
 
@@ -46,15 +46,23 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
-            <p className="text-sm font-semibold text-brand-dark">
+          <div className="rounded-2xl border-2 border-accent bg-white p-8 shadow-xl shadow-accent/10">
+            <p className="text-xl font-bold text-brand-dark sm:text-2xl">
               ¿Por qué comprar en Soluciones Online?
             </p>
-            <ul className="mt-4 space-y-3 text-sm text-neutral-600">
-              <li>💵 Precios en dólares, sin sorpresas</li>
-              <li>📦 Envío gratis a partir de 2 unidades</li>
-              <li>🛡 Garantía de 3 meses por fallas de fábrica</li>
-              <li>🤖 Atención inmediata por WhatsApp e IA</li>
+            <ul className="mt-6 space-y-4 text-base font-semibold text-brand-dark sm:text-lg">
+              <li className="flex items-center gap-3">
+                <span className="text-2xl">💵</span> Precios en dólares, sin sorpresas
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-2xl">📦</span> Envío gratis a partir de 2 unidades
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-2xl">🛡</span> Garantía de 3 meses por fallas de fábrica
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-2xl">🤖</span> Atención inmediata por WhatsApp e IA
+              </li>
             </ul>
           </div>
         </div>

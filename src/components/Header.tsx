@@ -30,7 +30,7 @@ export default function Header() {
           <Link href="/catalogo?brand=Motorola" className="hover:text-accent">
             Motorola
           </Link>
-          <Link href="/catalogo?brand=Apple" className="hover:text-accent">
+          <Link href="/catalogo?brand=iPhone" className="hover:text-accent">
             iPhone
           </Link>
           <Link href="/catalogo?brand=Samsung" className="hover:text-accent">
