@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import PriceTag from "@/components/PriceTag";
 import { Product, formatUsd, getProductImage } from "@/lib/products";
 
 export default function ProductCard({ product }: { product: Product }) {
@@ -47,13 +48,10 @@ export default function ProductCard({ product }: { product: Product }) {
       </h3>
 
       <div className="mt-auto pt-3">
-        <p
-          className={`font-bold text-brand-dark ${
-            product.isPromo ? "text-2xl text-deal" : "text-xl"
-          }`}
-        >
-          {formatUsd(product.priceX1)}
-        </p>
+        <PriceTag
+          value={product.priceX1}
+          className={`font-bold ${product.isPromo ? "text-2xl" : "text-xl"}`}
+        />
         <p className="text-xs text-neutral-500">
           Mayorista 5+: {formatUsd(product.priceX5)}
         </p>

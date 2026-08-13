@@ -1,6 +1,6 @@
 export const site = {
   name: "Soluciones Online",
-  tagline: "Todo lo que necesites",
+  tagline: "¡Todo lo que necesites cotizar!",
   cuit: "20-24897015-5",
   whatsapp: "5491160333772",
   whatsappDisplay: "11 6033 3772",

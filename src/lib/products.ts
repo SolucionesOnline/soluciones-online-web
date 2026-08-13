@@ -42,7 +42,7 @@ export function getProductImage(slug: string): string | null {
 }
 
 export function formatUsd(n: number) {
-  return `US$${n.toLocaleString("en-US")}`;
+  return `USD ${n.toLocaleString("en-US")}`;
 }
 
 export function relatedProducts(product: Product, limit = 4) {

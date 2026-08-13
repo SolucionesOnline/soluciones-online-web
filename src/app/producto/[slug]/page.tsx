@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import PriceTag from "@/components/PriceTag";
 import ProductCard from "@/components/ProductCard";
 import {
   formatUsd,
@@ -82,16 +83,14 @@ export default async function ProductPage({
           <div className="mt-6 rounded-2xl border border-border p-5">
             <div className="flex items-baseline justify-between">
               <span className="text-sm text-neutral-500">Precio unitario</span>
-              <span className="text-3xl font-bold text-brand-dark">
-                {formatUsd(product.priceX1)}
-              </span>
+              <PriceTag value={product.priceX1} className="text-3xl font-bold" />
             </div>
             <div className="mt-2 flex items-baseline justify-between border-t border-border pt-2">
               <span className="text-sm text-neutral-500">
                 Mayorista (3 o más unidades)
               </span>
-              <span className="text-lg font-semibold text-accent">
-                {formatUsd(product.priceX5)} c/u
+              <span>
+                <PriceTag value={product.priceX5} className="text-lg font-semibold" /> c/u
               </span>
             </div>
             <p className="mt-3 text-xs text-neutral-500">
