@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import ArsPrice from "@/components/ArsPrice";
 import PriceTag from "@/components/PriceTag";
 import ProductCard from "@/components/ProductCard";
 import {
@@ -40,6 +41,7 @@ export default async function ProductPage({
 
   const related = relatedProducts(product);
   const image = getProductImage(product.slug);
+  const mayoristaDiff = Math.round(product.priceX1 - product.priceX5);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
@@ -85,18 +87,17 @@ export default async function ProductPage({
               <span className="text-sm text-neutral-500">Precio unitario</span>
               <PriceTag value={product.priceX1} className="text-3xl font-bold" />
             </div>
-            <div className="mt-2 flex items-baseline justify-between border-t border-border pt-2">
-              <span className="text-sm text-neutral-500">
-                Mayorista (3 o más unidades)
-              </span>
-              <span>
-                <PriceTag value={product.priceX5} className="text-lg font-semibold" /> c/u
-              </span>
-            </div>
+            <ArsPrice
+              usd={product.priceX1}
+              className="block text-right text-xs text-neutral-500"
+            />
+            <p className="mt-3 border-t border-border pt-3 text-sm font-bold text-brand-dark">
+              Mayorista x5 equipos {mayoristaDiff} dólares menos c/u
+            </p>
             <p className="mt-3 text-xs text-neutral-500">
               Precio en dólares. Pagando en pesos se toma la cotización del
-              dólar blue del día vigente al momento del retiro/entrega, más
-              Mercado Pago disponible en cuotas.
+              dólar blue (precio de venta) + $15 ARS, vigente al momento de
+              reservar, más Mercado Pago disponible en cuotas.
             </p>
           </div>
 
@@ -120,7 +121,7 @@ export default async function ProductPage({
           </div>
 
           <ul className="mt-8 space-y-1 text-sm text-neutral-600">
-            <li>🛡 Garantía de 3 meses por fallas de fábrica</li>
+            <li>🛡️ Garantía Oficial</li>
             <li>📦 Envío gratis a partir de 2 unidades</li>
             <li>🔢 Compra mínima mayorista: 3 unidades (no aplica a productos menores a USD 50)</li>
           </ul>

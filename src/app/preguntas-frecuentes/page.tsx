@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "¿Qué medios de pago aceptan?",
-    a: "Efectivo, cripto (USDT red TRX) y Mercado Pago (tarjeta, en cuotas). Pagando en pesos, se toma el dólar blue del día + $20 ARS, con la cotización vigente al momento del retiro.",
+    a: "Efectivo, cripto (USDT red TRX) y Mercado Pago (tarjeta, en cuotas). Pagando en pesos, se toma la cotización del dólar blue (precio de venta) + $15 ARS, vigente al momento de reservar.",
   },
   {
     q: "¿Hacen envíos?",

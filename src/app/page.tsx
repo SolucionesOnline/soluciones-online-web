@@ -46,7 +46,7 @@ export default function Home() {
               <span className="text-2xl">📦</span> Envío gratis a partir de 2 unidades
             </li>
             <li className="flex items-center gap-3">
-              <span className="text-2xl">🛡</span> Garantía de 3 meses por fallas de fábrica
+              <span className="text-2xl">🛡️</span> Garantía Oficial
             </li>
             <li className="flex items-center gap-3">
               <span className="text-2xl">🤖</span> Atención inmediata por WhatsApp e IA
@@ -130,8 +130,8 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <p className="text-2xl font-bold">🛡</p>
-            <p className="mt-2 text-sm font-semibold">Garantía real</p>
+            <p className="text-2xl font-bold">🛡️</p>
+            <p className="mt-2 text-sm font-semibold">Garantía Oficial</p>
             <p className="mt-1 text-xs text-white/70">
               3 meses por fallas de fábrica. iPhone con garantía oficial Apple.
             </p>

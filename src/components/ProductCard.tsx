@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import ArsPrice from "@/components/ArsPrice";
 import PriceTag from "@/components/PriceTag";
-import { Product, formatUsd, getProductImage } from "@/lib/products";
+import { Product, getProductImage } from "@/lib/products";
 
 export default function ProductCard({ product }: { product: Product }) {
   const image = getProductImage(product.slug);
+  const mayoristaDiff = Math.round(product.priceX1 - product.priceX5);
 
   return (
     <Link
@@ -52,8 +54,9 @@ export default function ProductCard({ product }: { product: Product }) {
           value={product.priceX1}
           className={`font-bold ${product.isPromo ? "text-2xl" : "text-xl"}`}
         />
-        <p className="text-xs text-neutral-500">
-          Mayorista 5+: {formatUsd(product.priceX5)}
+        <ArsPrice usd={product.priceX1} className="block text-xs text-neutral-500" />
+        <p className="mt-1 text-xs font-bold text-neutral-500">
+          Mayorista x5 equipos {mayoristaDiff} dólares menos c/u
         </p>
       </div>
     </Link>

@@ -16,7 +16,7 @@ const conditions = [
   },
   {
     title: "Precio en dólares",
-    text: "Los precios se cotizan en USD. Pagando en pesos, se toma el dólar blue del día vigente al momento del retiro.",
+    text: "Los precios se cotizan en USD. Pagando en pesos, se toma la cotización del dólar blue (precio de venta) + $15 ARS, vigente al momento de reservar.",
   },
   {
     title: "Pago",
