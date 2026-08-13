@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site, waLink } from "@/lib/site";
 
@@ -8,7 +9,13 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold text-brand-dark">{site.name}</h3>
           <p className="mt-2 text-sm text-neutral-600">{site.tagline}</p>
-          <p className="mt-4 text-sm text-neutral-600">CUIT {site.cuit}</p>
+          <Image
+            src="/brand/logo.jpeg"
+            alt={site.name}
+            width={112}
+            height={112}
+            className="mt-4 rounded-full"
+          />
         </div>
 
         <div>

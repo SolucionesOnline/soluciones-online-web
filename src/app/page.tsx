@@ -124,9 +124,9 @@ export default function Home() {
           </div>
           <div>
             <p className="text-2xl font-bold">💳</p>
-            <p className="mt-2 text-sm font-semibold">Varios medios de pago</p>
+            <p className="mt-2 text-sm font-semibold">Medios de Pago</p>
             <p className="mt-1 text-xs text-white/70">
-              Mercado Pago, transferencia, efectivo y cripto (USDT).
+              Mercado Pago /TC, Transferencia, Efectivo y Cripto (USDT). Fact. A / B
             </p>
           </div>
           <div>
