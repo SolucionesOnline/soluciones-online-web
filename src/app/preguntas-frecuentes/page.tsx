@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "¿Cuándo puedo retirar mi pedido?",
-    a: "Pedidos antes de las 13:00 hs se retiran ese mismo día desde las 16:45 hs. Después de las 13:00 hs, se retiran al día siguiente desde las 16:45 hs. Una vez confirmada la reserva, implica compromiso de compra.",
+    a: "Pedidos (con reserva acreditada) antes de las 13:00 hs se podrán retirar o enviar ese mismo día a partir de las 15:45 hs. Pedidos (con reserva acreditada) posteriores a las 13:00 hs se retiran al día siguiente desde las 11:30 hs. La reserva implica compromiso de compra.",
   },
   {
     q: "¿Hay compra mínima?",
