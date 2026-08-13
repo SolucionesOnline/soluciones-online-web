@@ -1,7 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Product, formatUsd } from "@/lib/products";
+import { Product, formatUsd, getProductImage } from "@/lib/products";
 
 export default function ProductCard({ product }: { product: Product }) {
+  const image = getProductImage(product.slug);
+
   return (
     <Link
       href={`/producto/${product.slug}`}
@@ -11,6 +14,18 @@ export default function ProductCard({ product }: { product: Product }) {
           : "border-border bg-white"
       }`}
     >
+      {image && (
+        <div className="relative mb-3 aspect-square overflow-hidden rounded-xl bg-white">
+          <Image
+            src={image}
+            alt={product.name}
+            fill
+            className="object-contain p-2"
+            sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+          />
+        </div>
+      )}
+
       <div className="flex items-start justify-between gap-2">
         <span className="text-xs font-medium uppercase tracking-wide text-brand-light">
           {product.brand}

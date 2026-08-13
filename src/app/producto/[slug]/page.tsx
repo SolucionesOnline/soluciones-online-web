@@ -1,8 +1,10 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
 import {
   formatUsd,
   getProductBySlug,
+  getProductImage,
   products,
   relatedProducts,
 } from "@/lib/products";
@@ -36,13 +38,27 @@ export default async function ProductPage({
   if (!product) notFound();
 
   const related = relatedProducts(product);
+  const image = getProductImage(product.slug);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
       <div className="grid gap-10 sm:grid-cols-2">
-        <div className="flex aspect-square items-center justify-center rounded-2xl border border-border bg-surface text-sm text-neutral-400">
-          Foto próximamente
-        </div>
+        {image ? (
+          <div className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-white">
+            <Image
+              src={image}
+              alt={product.name}
+              fill
+              className="object-contain p-6"
+              sizes="(min-width: 640px) 50vw, 100vw"
+              priority
+            />
+          </div>
+        ) : (
+          <div className="flex aspect-square items-center justify-center rounded-2xl border border-border bg-surface text-sm text-neutral-400">
+            Foto próximamente
+          </div>
+        )}
 
         <div>
           <span className="text-xs font-semibold uppercase tracking-wide text-brand-light">

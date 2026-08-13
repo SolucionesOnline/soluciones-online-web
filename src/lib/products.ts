@@ -1,4 +1,9 @@
+import fs from "node:fs";
+import path from "node:path";
 import productsData from "../../data/products.json";
+
+const PRODUCT_IMAGE_EXTS = ["jpg", "jpeg", "png", "webp"];
+const productsImageDir = path.join(process.cwd(), "public", "products");
 
 export type Product = {
   id: number;
@@ -21,6 +26,19 @@ export const categories = Array.from(new Set(products.map((p) => p.category)));
 
 export function getProductBySlug(slug: string) {
   return products.find((p) => p.slug === slug);
+}
+
+/**
+ * Convención por slug: si existe public/products/<slug>.(jpg|jpeg|png|webp)
+ * se usa esa foto; si no, el caller muestra el placeholder.
+ */
+export function getProductImage(slug: string): string | null {
+  for (const ext of PRODUCT_IMAGE_EXTS) {
+    if (fs.existsSync(path.join(productsImageDir, `${slug}.${ext}`))) {
+      return `/products/${slug}.${ext}`;
+    }
+  }
+  return null;
 }
 
 export function formatUsd(n: number) {
