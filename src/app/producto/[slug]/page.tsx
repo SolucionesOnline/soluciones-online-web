@@ -123,7 +123,7 @@ export default async function ProductPage({
           <ul className="mt-8 space-y-1 text-sm text-neutral-600">
             <li>🛡️ Garantía Oficial</li>
             <li>📦 Envío gratis a partir de 2 unidades</li>
-            <li>🔢 Compra mínima mayorista: 3 unidades (no aplica a productos menores a USD 50)</li>
+            <li>🔢 Compra mínima mayorista: 5 unidades (no aplica a productos menores a USD 50)</li>
           </ul>
         </div>
       </div>

@@ -8,11 +8,11 @@ export const metadata = {
 const conditions = [
   {
     title: "Mínimo de compra",
-    text: "3 unidades en tu primera compra para acceder al precio mayorista. No aplica a productos de menos de USD 50.",
+    text: "5 unidades en tu primera compra para acceder al precio mayorista. No aplica a productos de menos de USD 50.",
   },
   {
     title: "Podés combinar modelos",
-    text: "No hace falta llevar 3 unidades iguales: podés combinar celulares, auriculares u otros accesorios.",
+    text: "No hace falta llevar 5 unidades iguales: podés combinar celulares, auriculares u otros accesorios.",
   },
   {
     title: "Precio en dólares",

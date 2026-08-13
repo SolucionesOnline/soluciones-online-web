@@ -140,7 +140,7 @@ export default function Home() {
             <p className="text-2xl font-bold">🏷️</p>
             <p className="mt-2 text-sm font-semibold">Precio mayorista</p>
             <p className="mt-1 text-xs text-white/70">
-              Desde 3 unidades accedé a precio por volumen.
+              Desde 5 unidades accedés a descuento de USD 5 por equipo.
             </p>
           </div>
         </div>

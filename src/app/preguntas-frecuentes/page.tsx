@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "¿Hay compra mínima?",
-    a: "Para acceder al precio mayorista, la primera compra requiere un mínimo de 3 unidades (podés combinar modelos distintos). No aplica a productos de menos de USD 50.",
+    a: "Para acceder al precio mayorista, la primera compra requiere un mínimo de 5 unidades (podés combinar modelos distintos). No aplica a productos de menos de USD 50.",
   },
   {
     q: "¿Qué medios de pago aceptan?",

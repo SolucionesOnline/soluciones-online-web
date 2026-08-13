@@ -6,34 +6,20 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-        <div className="flex items-center gap-2 shrink-0">
-          <Link href="/" className="flex items-center gap-2">
+        <div className="flex items-center gap-3 shrink-0">
+          <Link href="/" className="flex items-center gap-3">
             <Image
               src="/brand/logo.jpeg"
               alt={site.name}
-              width={44}
-              height={44}
+              width={64}
+              height={64}
               className="rounded-full"
               priority
             />
-            <span className="hidden text-lg font-semibold text-brand-dark sm:block">
+            <span className="hidden text-2xl font-extrabold text-brand-dark sm:block">
               {site.name}
             </span>
           </Link>
-          <a
-            href={waLink("Hola! Quiero hablar con un asesor de Soluciones Online.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Escribinos por WhatsApp"
-          >
-            <Image
-              src="/brand/whatsapp-icon.jpeg"
-              alt="WhatsApp"
-              width={32}
-              height={32}
-              className="rounded-full"
-            />
-          </a>
         </div>
 
         <nav className="hidden items-center gap-6 text-sm font-medium text-brand-dark md:flex">
