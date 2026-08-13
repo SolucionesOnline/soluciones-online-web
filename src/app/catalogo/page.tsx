@@ -38,7 +38,7 @@ export default async function Catalogo({
     <div className="mx-auto max-w-6xl px-4 py-10">
       <h1 className="text-3xl font-bold text-brand-dark">Catálogo</h1>
       <p className="mt-1 text-sm text-neutral-600">
-        {filtered.length} producto{filtered.length !== 1 ? "s" : ""} · precios en USD, unidad / mayorista 5+
+        {filtered.length} producto{filtered.length !== 1 ? "s" : ""} · consultá precio unitario y mayorista (5+) por WhatsApp
       </p>
 
       <form className="mt-6 max-w-sm" action="/catalogo" method="get">

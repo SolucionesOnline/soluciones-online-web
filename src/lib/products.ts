@@ -41,8 +41,9 @@ export function getProductImage(slug: string): string | null {
   return null;
 }
 
-export function formatUsd(n: number) {
-  return `USD ${n.toLocaleString("en-US")}`;
+/** Saca el precio viejo entre paréntesis de las etiquetas de oferta, ej. "(Antes $180)" */
+export function cleanPromoLabel(label: string | null) {
+  return label ? label.replace(/\s*\(antes[^)]*\)/gi, "").trim() : null;
 }
 
 export function relatedProducts(product: Product, limit = 4) {

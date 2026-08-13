@@ -16,8 +16,8 @@ export default function Home() {
     <div>
       {/* Elegí el tuyo */}
       <section className="mx-auto max-w-6xl px-4 pt-10">
-        <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
-          +{products.length} equipos en stock
+        <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent">
+          🔥 Los modelos más vendidos!
         </span>
         <h1 className="mt-3 text-4xl font-extrabold uppercase leading-tight tracking-tight text-brand-dark sm:text-6xl">
           Elegí el tuyo
@@ -40,7 +40,7 @@ export default function Home() {
           </p>
           <ul className="mt-6 grid gap-4 text-base font-semibold text-brand-dark sm:grid-cols-2 sm:text-lg lg:grid-cols-4">
             <li className="flex items-center gap-3">
-              <span className="text-2xl">💵</span> Precios en dólares, sin sorpresas
+              <span className="text-2xl">💬</span> Cotización personalizada al instante
             </li>
             <li className="flex items-center gap-3">
               <span className="text-2xl">📦</span> Envío gratis a partir de 2 unidades
@@ -63,8 +63,8 @@ export default function Home() {
               Atención personalizada por WhatsApp.
             </h2>
             <p className="mt-4 text-lg text-neutral-600">
-              Venta minorista y mayorista, con precios en dólares y atención
-              inmediata por WhatsApp e IA.
+              Venta minorista y mayorista, con cotización personalizada y
+              atención inmediata por WhatsApp e IA.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
@@ -140,7 +140,7 @@ export default function Home() {
             <p className="text-2xl font-bold">🏷️</p>
             <p className="mt-2 text-sm font-semibold">Precio mayorista</p>
             <p className="mt-1 text-xs text-white/70">
-              Desde 5 unidades accedés a descuento de USD 5 por equipo.
+              Desde 5 unidades accedés a nuestro precio mayorista especial.
             </p>
           </div>
         </div>

@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
-import { DolarBlueProvider } from "@/components/DolarBlueProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,12 +20,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="es" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <DolarBlueProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <ChatWidget />
-        </DolarBlueProvider>
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <ChatWidget />
       </body>
     </html>
   );
